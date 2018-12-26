@@ -1,0 +1,281 @@
+body{
+    font-family: 'Nova Square', cursive;
+    font-size: 16px;
+}
+
+
+.logo{
+    padding: 3px;
+    margin-top: 6px;
+    font-size: 27px;
+}
+.logo > a:hover{
+    text-decoration: none;
+    color: white;
+}
+.brand-logo{
+    border: 1px solid #2196f3;
+    border-radius: 50%;
+    padding: 8px;
+    color: #fff;
+    background-color: #2196f3;
+    font-weight: 900;
+}
+
+.small-text{
+    font-size: 14px;
+}
+
+.down-icon a{
+    font-size: 300%;
+    color: #2196f3;
+    text-decoration: none;
+}
+
+.down-button{
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    text-align: center;
+}
+
+.fill-screen{
+    padding-top: 50px;
+    background-size: cover;
+    background-position: center; 
+}
+
+.title-row{
+    position: relative;
+    min-height: 300px;
+}
+
+
+.title{
+    position: absolute;
+    padding: 20px;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+.first-name{
+    margin-top: 190px;
+    color: white;
+    font-size: 300%;
+}
+
+
+.last-name{
+    color: #000;
+    font-weight: 900;
+    background-color: #2196f3;
+    padding: 0px 10px;
+}
+
+.sec-header{
+    padding-top: 50px;
+    text-align: center;
+}
+
+.table-custom{
+    font-size: 100%;
+}
+
+
+.table-custom dt{
+    text-align: left;
+    font-weight: bold;
+}
+
+.table-custom dd{
+    text-align: left;
+}
+
+.social a{
+    z-index: 1;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    padding-top: 5px;
+    text-align: center;
+    color: black;
+    border: 1px solid black;
+}
+
+.social a i{
+    font-size: 20px;
+}
+
+.social a .fab{
+    position: relative;
+    color: #262626;
+    transition: 1s;
+}
+
+.social a:hover .fab{
+    transform: rotateY(360deg);
+}
+
+
+.fixed-attachement{
+    background-attachment: fixed;
+}
+
+.activity-elements{
+    text-align: center;
+}
+
+.card-container{
+    perspective: 1000px;
+    -webkit-perspective: 1000px;
+}
+
+.card h4{
+    margin: 0;
+    color: #fff;
+
+}
+
+.card{
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    line-height: 250px;
+    margin: 10px;
+    width: 250px;
+    height: 250px;
+    transition: all 0.6s ease;
+    transform-style: preserve-3d;
+}
+
+
+.front, .back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.front{
+    background-color: #2196f3;  
+}
+
+.back{
+    background-color: #b1c4d4;
+    transform: rotateY(180deg);
+}
+
+.card:hover{
+    transform: rotateY(180deg);
+}
+
+.line{
+    text-align: center; 
+    display: block;
+    margin-top: 0px;
+    margin-bottom: 60px;
+    width: 300px;
+    height: 2px;
+    background-color: grey;
+} 
+
+article#skills-progress{
+    padding: 3px 10px 0;
+}
+
+#skills-progress div.progress{
+    font-weight: bold;
+    color: #fff;
+    background-color: #f3f3f3;
+    border: none;
+    box-shadow: none;
+    height: 2em;
+
+}
+
+div.progress-bar > span{
+    float: left;
+    position: relative;
+    top: 4px;
+    left: 2%;
+}
+
+.progress-bar{
+    font-size: 100%; 
+}
+
+.skill-level{
+    font-size: 80%;
+    color: #0fff04;
+    padding-right: 2%;
+}
+
+.skill-cards{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.skill-tech{
+    width: 100%;
+    margin-bottom: 50px;
+    padding: 20px;
+    text-align: center;
+}
+
+
+
+.box{
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.24),0 0 4px 0 rgba(0,0,0,0.14);
+    box-sizing: border-box;
+    max-width: 320px;
+    padding: 0px;
+    margin: 30px;
+    background-color: white;
+    transition: background-color 0.9s ease;
+    
+}
+
+
+.zoom {
+    transition: transform .2s;
+}
+  
+.zoom:hover {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.1); 
+}
+
+.vinay:hover{
+    background-color: #e6e6e6!important;
+}
+
+@media (max-width: 788px) {
+    .fixed-attachement{
+        background-attachment: scroll;
+    }
+    #achievements{
+        background-color: #cdcbcb;
+    }
+    #education{
+        background-color: #cdcbcb;
+    }
+}
+
+.cool-link::after{
+    content: '';
+    display: block;
+    width: 0;
+    padding-top: 0px;
+    height: 1px;
+    background: #000;
+    transition: width .3s;
+}
+.cool-link:hover::after{
+    width: 100%;
+    transition: width .3s;
+}
