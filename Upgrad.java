@@ -4,7 +4,7 @@ import java.io.InputStreamReader;
 import java.util.Scanner; 
 import java.util.StringTokenizer; 
 import java.util.ArrayList;
-public class GFG {
+public class Upgrad{
 	public static void main (String[] args){
 	    FastReader sc=new FastReader();
 	    int n=sc.nextInt();
@@ -15,21 +15,16 @@ public class GFG {
 	            String name=sc.next();
 	            double marks=sc.nextDouble();
 	            int number=sc.nextInt();
-	            Box b=new Box(name,marks,number);
-	            q.insert(b);
-	        }else{
+	            q.insert(new Box(name,marks,number));
+	        }else
 	            q.remove();
-	        }
 	    }
-	    int size=q.size();
-	    if(q.size()==0){
+	    n=q.size();
+	    if(n==0)
 	        System.out.println("EMPTY");
-	    }else{
-	        for(int i=0;i<size;i++){
-	            Box b=q.remove();
-	            System.out.println(b.name);
-	        }
-	    }
+	    else
+	        for(int i=0;i<n;i++)
+	            System.out.println((q.remove()).name);
 	}
 }
 class Box{
@@ -42,19 +37,13 @@ class Box{
         this.number=number;
     }
 }
-
+// PRIORITY QUEUE CLASS
 class PriorityQueue{
     private ArrayList<Box> heap;
     public PriorityQueue(){
         heap=new ArrayList<Box>();
     }
-    public boolean isEmpty(){ return heap.size()==0; }
     public int size(){ return heap.size(); }
-    public Box getMax(){
-        if(heap.size()==0)
-            return null;
-        return heap.get(0);
-    }
     public void insert(Box b){
         heap.add(b);
         int childIndex=heap.size()-1;
@@ -66,22 +55,16 @@ class PriorityQueue{
                 Box temp=x;
                 heap.set(childIndex,y);
                 heap.set(parentIndex,temp);
-                childIndex=parentIndex;
-                parentIndex=(childIndex-1)/2;
             }else if(x.marks==y.marks){
                 if((x.name).compareTo(y.name)<0){
                     Box temp=x;
                     heap.set(childIndex,y);
                     heap.set(parentIndex,temp);
-                    childIndex=parentIndex;
-                    parentIndex=(childIndex-1)/2;
                 }else if((x.name).compareTo(y.name)==0){
                     if(x.number<y.number){
                         Box temp=x;
                         heap.set(childIndex,y);
                         heap.set(parentIndex,temp);
-                        childIndex=parentIndex;
-                        parentIndex=(childIndex-1)/2;
                     }else{
                         return;
                     }
@@ -91,40 +74,44 @@ class PriorityQueue{
             }else{
                 return;
             }
+            childIndex=parentIndex;
+            parentIndex=(childIndex-1)/2;
         }
     }
     public Box remove(){
         Box b=heap.get(0);
-        heap.set(0,heap.get(heap.size()-1));
-        heap.remove(heap.size()-1);
+        int n=heap.size();
+        heap.set(0,heap.get(n-1));
+        heap.remove(n-1);
+        n=heap.size();
         int index=0;
         int minIndex=index;
         int lci=1;
         int rci=2;
-        while(lci<heap.size()){
+        while(lci<n){
             int c=0;
             if(heap.get(lci).marks>heap.get(minIndex).marks){
                 minIndex=lci;
                 c=1;
             }
-            if(rci<heap.size() && heap.get(rci).marks>heap.get(minIndex).marks){
+            if(rci<n && heap.get(rci).marks>heap.get(minIndex).marks){
                 minIndex=rci;
                 c=1;
             }
-            if(c==0 && heap.get(lci).marks==heap.get(minIndex).marks && (rci>heap.size() || heap.get(rci).marks==heap.get(minIndex).marks)){
+            if(c==0 && heap.get(lci).marks==heap.get(minIndex).marks && (rci>=n || heap.get(rci).marks==heap.get(minIndex).marks)){
                 c=0;
                 if((heap.get(lci).name).compareTo(heap.get(minIndex).name)<0){
                     minIndex=lci;
                     c=1;
                 }
-                if(rci<heap.size() && (heap.get(rci).name).compareTo(heap.get(minIndex).name)<0){
+                if(rci<n && (heap.get(rci).name).compareTo(heap.get(minIndex).name)<0){
                     minIndex=rci;
                     c=1;
                 }
-                if(c==0 && (heap.get(lci).name).equals(heap.get(minIndex).name) && (rci>heap.size() || (heap.get(rci).name).equals(heap.get(minIndex).name))){
+                if(c==0 && (heap.get(lci).name).equals(heap.get(minIndex).name) && (rci>=n || (heap.get(rci).name).equals(heap.get(minIndex).name))){
                     if(heap.get(lci).number<heap.get(minIndex).number)
                         minIndex=lci;
-                    if(rci<heap.size() && heap.get(rci).number<heap.get(minIndex).number)
+                    if(rci<n && heap.get(rci).number<heap.get(minIndex).number)
                         minIndex=rci;
                 }
             }
@@ -141,6 +128,7 @@ class PriorityQueue{
     }
 }
 
+// FAST READER CLASS FOR TAKING INPUT FAST
 class FastReader { 
     BufferedReader br; 
     StringTokenizer st; 
