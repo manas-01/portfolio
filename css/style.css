@@ -838,6 +838,7 @@ footer .footer-social ul li:hover span:nth-child(1){
 	margin:5px;
 }
 .burger-menu{
+	margin-top:-10px;
 	display: flex;
 	flex-direction: column;
 	width:400px;
