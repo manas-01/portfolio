@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -327,5 +327,695 @@
     <script type="text/javascript" src="js/animatescroll.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="js/app.js"></script>
+</body>
+</html>
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>Vinay Yadav</title>
+	<meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1.0">
+	<!-- <link rel="icon" href="images/favicon.png"> -->
+	<!-- <link href="CSS/desktop.css" rel="stylesheet" media="screen and (max-width: 600px)"> -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Abel|Aclonica|Advent+Pro|Amaranth|Architects+Daughter|Belleza|Berkshire+Swash|Boogaloo|Bree+Serif|Cabin+Condensed|Changa|Chilanka|Coda|Dancing+Script|Electrolize|Exo+2|Gayathri|Handlee|Indie+Flower|Istok+Web|Jura|Kaushan+Script|Kite+One|Livvic|Magra|Marcellus|Marmelad|Merienda|Monda|Neucha|Overlock|PT+Sans+Narrow|Pacifico|Philosopher|Rambla|Rancho|Ruda|Saira+Semi+Condensed|Shadows+Into+Light|Special+Elite|Titillium+Web|Yanone+Kaffeesatz&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Nova+Square&display=swap" rel="stylesheet">
+	<script
+	src="https://code.jquery.com/jquery-3.4.1.min.js"
+	integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+	crossorigin="anonymous"></script>
+	<!-- <script src="https://kit.fontawesome.com/7c6b397831.js"></script> -->
+	<script type="text/javascript"> (function() { var css = document.createElement('link'); css.href = 'https://use.fontawesome.com/releases/v5.1.0/css/all.css'; css.rel = 'stylesheet'; css.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(css); })(); </script>
+	<style type="text/css">
+		/*PRELOAD*/
+		.preload{
+			position: fixed;
+			top:0;
+			width: 100%;
+			height: 100vh;
+			background-color: #77b3d4;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			transition: opacity 0.5s ease;
+			z-index: 99999;
+		}
+		.preload-finish{
+			opacity: 0;
+			pointer-events: none;
+		}
+		.cloud1,
+		.cloud2,
+		.cloud3{
+			right: 0;
+			height: 100px;
+			position: absolute;
+			z-index: -1;
+		}
+		.cloud1{
+			transform: translate(100%,-25%);
+			top:25%;
+			animation: clouds 3s ease infinite;
+		}
+		.cloud2{
+			transform: translate(100%,-50%);
+			top:50%;
+			animation: clouds 3s ease infinite 2s;
+		}
+		.cloud3{
+			transform: translate(100%,-75%);
+			top:75%;
+			animation: clouds 3s ease infinite 1.5s;
+		}
+		.airplane{
+			height: 200px;
+			animation: airplane 0.5s ease infinite alternate;
+		}
+		#preload-h3{
+			position: absolute;
+			top:75%;
+			transform: translateY(-75%);
+			color: #fff;
+			font-size: 35px;
+			font-family: sans-serif;
+		}
+		@keyframes airplane{
+			from{
+				transform: translateY(0px);
+			}
+			to{
+				transform: translateY(50px);
+			}
+		}
+		@keyframes clouds{
+			from{
+				right: 0%;
+			}
+			to{
+				right: 130%;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="preload">
+		<img class="airplane" src="images/airplane.png" alt="airplane">
+		<h3 id="preload-h3">Landing on the Website...</h3>
+		<img class="cloud1" src="images/cloud.png" alt="cld1">
+		<img class="cloud2" src="images/cloud.png" alt="cld2">
+		<img class="cloud3" src="images/cloud.png" alt="cld3">
+	</div>
+	<figure>
+		<video id="vid" src="videos/code35.mp4" width="500"  height="200"  autoplay muted loop></video>
+		<script>
+			document.getElementById('vid').play();
+		</script>
+		<div id="d2" class="unselectable">
+			<h1>Hello, I'm <span>Vinay Yadav</span>.<br/>I'm a full-stack web developer.</h1>
+			<a href="#about">View my work <i class="fas fa-arrow-right"></i></a>
+		</div>
+	</figure>
+	<div class="nav" id="navigation">
+		<div class="nav-bar">
+			<a href="#" class="nav-item unselectable">HOME</a>
+			<a href="#about" class="nav-item unselectable">ABOUT</a>
+			<a href="#portfolio" class="nav-item unselectable">PORTFOLIO</a>
+			<a href="#certifications" class="nav-item unselectable">CERTIFICATIONS</a>
+			<a href="#education" class="nav-item unselectable">EDUCATION</a>
+			<a href="#contact" class="nav-item unselectable">CONTACT</a>
+		</div>
+		<div class="burger">
+			<div class="bar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+		</div>
+		</a>
+		<div class="burger-menu">
+			<a href="#">HOME</a>
+			<a href="#about">ABOUT</a>
+			<a href="#portfolio">PORTFOLIO</a>
+			<a href="#certifications">CERTIFICATIONS</a>
+			<a href="#education">EDUCATION</a>
+			<a href="#contact">CONTACT</a>
+		</div>
+	</div>
+	<section id="about" class="flex-column">
+		<div class="background">
+			<canvas id="hero-canvas" width="1970" height="1380"></canvas>
+		</div>
+		<div class="section-heading flex-row">
+			<div class="heading-content">
+				<i></i>
+				<h3>ABOUT</h3>
+			</div>
+		</div>
+		<div class="focus flex-row">
+			<div class="focus-item flex-column">
+				<div class="hexagon">
+					<div class="hexagon-inner">
+						<div class="hexagon-inner-in" style="background-color: #fa7272;">
+							<embed style="margin-left:37%;margin-top:12%;width:25%;
+							height:50%;" src="file:///D:/Front%20end%20revision/1x/baseline_phonelink_black_24dp.png">
+						</div>
+					</div>
+				</div>
+				<h2>Responsive</h2>
+				<p>My layouts are adaptable to any screen.</p>
+			</div>
+			<div class="focus-item flex-column">
+				<div class="hexagon">
+					<div class="hexagon-inner">
+						<div class="hexagon-inner-in" style="background-color: #fa7272;display: flex;justify-content: center;align-items: center;">
+							<i style="font-size:3.5rem;margin-left:4%;color: #000;" class="fas fa-tachometer-alt"></i>
+						</div>
+					</div>
+				</div>
+				<h2>Fast</h2>
+				<p>I give highest priority to lag free interaction.</p>
+			</div>
+			<div class="focus-item flex-column">
+				<div class="hexagon">
+					<div class="hexagon-inner">
+						<div class="hexagon-inner-in" style="background-color: #fa7272;display: flex;justify-content: center;align-items: center;">
+							<i style="font-size:3.5rem;margin-left:4%;color: #000;" class="fas fa-rocket"></i>
+						</div>
+					</div>
+				</div>
+				<h2>Dynamic</h2>
+				<p>I love making pages come to life.</p>
+			</div>
+			<div class="focus-item flex-column">
+				<div class="hexagon">
+					<div class="hexagon-inner">
+						<div class="hexagon-inner-in" style="background-color: #fa7272;display: flex;justify-content: center;align-items: center;">
+							<i style="font-size:3.5rem;margin-left:4%;color: #000;" class="fas fa-lightbulb"></i>
+						</div>
+					</div>
+				</div>
+				<h2>Intuitive</h2>
+				<p>Strong preference for easy to use, intuitive UX/UI.</p>
+			</div>
+		</div>
+		<div class="section-content flex-row">
+			<div class="my-description flex-column">
+				<div class="hexagon">
+					<div class="hexagon-inner">
+						<div class="hexagon-inner-in">
+						</div>
+					</div>
+				</div>
+				<h2>Who's this guy?</h2>
+				<p>I'm an engineering apprentice and a competitive coder-cum-web developer. I love to see UI effects, animations and creating intuitive, dynamic user experiences. This amusement makes me develop the same.</p>
+			</div>
+			<div class="skills flex-row">
+				<div class="skill-container flex-column">
+					<div class="skill-item">
+						<div class="skill-name flex-row" style="background-color: #e34f26;">
+							<i class="fas fa-code"></i>
+							<span>HTML</span>
+						</div>
+						<div class="skill-length" data-value="55%" style="width:0;background:linear-gradient(to right, #cb411a 0%, #f0a38e 100%);"></div>
+						<div class="skill-percentage flex-row">80%</div>
+					</div>
+					<div class="skill-item">
+						<div class="skill-name flex-row" style="background-color: #563d7c;">
+							<i class="fab fa-css3"></i>
+							<span>CSS</span>
+						</div>
+						<div class="skill-length" data-value="60%" style="width:0;background:linear-gradient(to right, #473267 0%, #ad98cd 100%);"></div>
+						<div class="skill-percentage flex-row">90%</div>
+					</div>
+					<div class="skill-item">
+						<div class="skill-name flex-row" style="background-color: #F0DB4F;">
+							<i class="fab fa-js"></i>
+							<span>JavaScript</span>
+						</div>
+						<div class="skill-length" data-value="50%" style="width:0;background:linear-gradient(to right, #d3b912 0%, #f5e78a 100%);"></div>
+						<div class="skill-percentage flex-row">70%</div>
+					</div>
+					<!-- <div class="skill-item">
+						<div class="skill-name flex-row" style="background-color: #b52e31;">
+							<i class="fab fa-angular"></i>
+							<span>Angular</span>
+						</div>
+						<div class="skill-length" data-value="35%" style="width:0;background:linear-gradient(to right, #8e2526 0%, #e59a9b 100%);"></div>
+						<div class="skill-percentage flex-row">55%</div>
+					</div> -->
+					<div class="skill-item">
+						<div class="skill-name flex-row" style="background-color: #215732;">
+							<i class="fab fa-node-js"></i>
+							<span>Node.Js</span>
+						</div>
+						<div class="skill-length" data-value="30%" style="width:0;background:linear-gradient(to right, #153720 0%, #84c982 100%);"></div>
+						<div class="skill-percentage flex-row">50%</div>
+					</div>
+					<div class="skill-item">
+						<div class="skill-name flex-row" style="background-color: #589636;">
+							<i class="fas fa-database"></i>
+							<span>MongoDB</span>
+						</div>
+						<div class="skill-length" data-value="30%" style="width:0;background:linear-gradient(to right, #427029 0%, #8bc969 100%);"></div>
+						<div class="skill-percentage flex-row">50%</div>
+					</div>
+					<div class="skill-item">
+						<div class="skill-name flex-row" style="background-color: #f89820;">
+							<i class="fab fa-java"></i>
+							<span>JAVA</span>
+						</div>
+						<div class="skill-length" data-value="55%" style="width:0;background:linear-gradient(to right, #df7e07 0%, #fbc583 100%);"></div>
+						<div class="skill-percentage flex-row">80%</div>
+					</div>
+					<div class="skill-item">
+						<div class="skill-name flex-row" style="background-color: #fa7272;">
+							<i class="fas fa-code-branch"></i>
+							<span>Algorithms</span>
+						</div>
+						<div class="skill-length" data-value="50%" style="width:0;background:linear-gradient(to right, #f72222 0%, #fcb5b5 100%);"></div>
+						<div class="skill-percentage flex-row">70%</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="portfolio" class="flex-column">	
+		<div class="section-heading flex-row">
+			<div class="heading-content">
+				<i></i>
+				<h3>PORTFOLIO</h3>
+			</div>
+		</div>
+		<div class="projects">
+			<div id="p1" style="background-image: url('images/bulletin-board-3233641_1920.jpg');">
+				<p>
+					TODO Web App
+				</p>
+				<a href="#modal1">LEARN MORE</a>
+			</div>
+			<div style="background-image: url('./images/phonebook.jpeg');">
+				<p style="left:15%;">
+					Phonebook Aplication
+				</p>
+				<a href="#modal1">LEARN MORE</a>
+			</div>
+			<div style="background-image: url('./images/number.jpeg');">
+				<p style="left:19%;">
+					Number Guess Game
+				</p>
+				<a href="#modal1">LEARN MORE</a>
+			</div>
+			<div style="background-image: url('images/calculator-925385_1920.jpg');">
+				<p style="left:20%;">
+					Arithmetic Calculator 
+				</p>
+				<a href="#modal1">LEARN MORE</a>
+			</div>
+			<div style="background-image: url('./images/music.jpg');">
+				<p style="left:15%;">
+					Music Player(Front-end)
+				</p>
+				<a href="#modal1">LEARN MORE</a>
+			</div>
+		</div>
+	</section>
+	<section id="certifications" class="flex-column">
+		<div class="section-heading flex-row">
+			<div class="heading-content">
+				<i></i>
+				<h3>CERTIFICATIONS</h3>
+			</div>
+		</div>
+		<div class="timeline">
+			<div class="timeline-box">
+				<div class="logo">
+					<img src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000030_1550710829_ninjasicon.png">
+				</div>
+				<div class="company">
+					<h5>Teaching Assistant for DS Course</h5>
+					<h6>Coding Ninjas</h6>
+					<span class="size1">June 2019 - September 2019</span>
+				</div>
+				<div class="description size1">
+					I have served as Teaching assistant for the Data Structure course where my task was to solve student's queries, debugging their codes and helping them hone thir programming skills.
+				</div>
+			</div>
+			<div class="timeline-box">
+				<div class="logo">
+					<img src="./images/cc.jpg">
+				</div>
+				<div class="company">
+					<h5>CCDSAP</h5>
+					<h6>CodeChef</h6>
+					<span class="size1">October 2018</span>
+				</div>
+				<div class="description size1">
+					CCDSAP: CodeChef Data Structures and Algorithms Programme is a dispensation by codehef which certifies the students by assessing the skills through an onsite coding test and then provides certificate to qualified candidates. I have qualified the foundation level of CCDSAP.
+				</div>
+			</div>
+			<div class="timeline-box">
+				<div class="logo">
+					<img src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000030_1550710829_ninjasicon.png">
+				</div>
+				<div class="company">
+					<h5>Data Structure training through JAVA</h5>
+					<h6>Coding Ninjas</h6>
+					<span class="size1">August 2018 - October 2018</span>
+				</div>
+				<div class="description size1">
+					I have done the training of Data Structures through JAVA from Coding Ninjas, where i completed my traininig with 2nd rank and got a certification. I got my hands dirty with JAVA and honed my programming skills here.
+				</div>
+			</div>
+			<div class="timeline-box">
+				<div class="logo">
+					<img src="./images/cc.jpg">
+				</div>
+				<div class="company">
+					<h5>SnackDown'19</h5>
+					<h6>CodeChef</h6>
+					<span class="size1">January 2019</span>
+				</div>
+				<div class="description size1">
+					I participated in SnackDown'19 organised by CodeChef and could go to Round 1A.
+				</div>
+			</div>
+			<div class="timeline-divider" id="plane-divider">
+				<div class="flight">
+					<i class="fas fa-plane"></i>
+				</div>
+			</div>
+		</div>
+		<div class="wave"></div>
+	</section>
+	<section id="education" class="flex-column">
+		<div class="section-heading flex-row">
+			<div class="heading-content">
+				<!-- <span class="head-icon"><i class="icon fas fa-graduation-cap"></i></span> -->
+				<h3>EDUCATION</h3>
+			</div>
+		</div>
+		<div class="timeline">
+			<div class="timeline-box">
+				<div class="logo">
+					<img src="./images/BIET.jpg">
+				</div>
+				<div class="company">
+					<h5>B.Tech (Information Technology)</h5>
+					<h6>Bundelkhand Institute Of Engineering and Technology, Jhansi</h6>
+					<span class="size1">2016 - 2020</span>
+				</div>
+				<div class="description size1">
+					I am presently pursuing my Third year of B.Tech in Information Technology from BIET Jhansi and aggregate percentage till now is 75%.
+				</div>
+			</div>
+			<div class="timeline-box">
+				<div class="logo">
+					<img src="./images/school1.jpg">
+				</div>
+				<div class="company">
+					<h5>Higher Secondary</h5>
+					<h6>Saint Vivekanand Sr. Sec. Public School, Etawah</h6>
+					<span class="size1">2015</span>
+				</div>
+				<div class="description size1">
+					I have completed my Higher-Secondary from CBSE Board with 92% in 2015.
+				</div>
+			</div>
+			<div class="timeline-box">
+				<div class="logo">
+					<img src="./images/school1.jpg">
+				</div>
+				<div class="company">
+					<h5>Matriculation</h5>
+					<h6>Saint Vivekanand Sr. Sec. Public School, Etawah</h6>
+					<span class="size1">2013</span>
+				</div>
+				<div class="description size1">
+					I have successfully completed my Matriculation from CBSE Board in 2013 and I scrored 9.4 CGPA.
+				</div>
+			</div>
+			<div class="timeline-divider" id="truck-divider">
+				<div class="flight">
+					<i class="fas fa-truck"></i>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="contact" class="flex-column">
+		<div class="section-heading flex-row">
+			<div class="headings">
+				<i></i>
+				<h3>CONTACT</h3>
+			</div>
+		</div >
+		<div class="section-content flex-column">
+			<p>Have a question or want to work together?</p>
+			<form class="flex-column">
+				<div>
+					<input placeholder="Name" type="text" name="name" required>
+				</div>
+				<div>
+					<input placeholder="E-mail" type="email" name="email" required>
+				</div>
+				<div>
+					<textarea placeholder="Message" rows="4"></textarea>
+				</div>
+				<button>SUBMIT</button>
+			</form>
+		</div>
+	</section>
+
+	<footer class="flex-column">
+		<a href="#" class="scrollToTop">
+			<i class="fas fa-chevron-up"></i>
+		</a>
+		<div class="footer-social">
+			<ul>
+				<li>
+					<a target="_blank" href="https://www.linkedin.com/in/vinay-yadav-751539152/">
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+						<span class="fab fa-linkedin-in"></span>
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="https://stackoverflow.com/users/9042318/vinay-yadav">
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+						<span class="fab fa-stack-overflow"></span>
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="https://www.facebook.com/profile.php?id=100004607584385">
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+						<span class="fab fa-facebook-f"></span>
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="https://www.quora.com/profile/Vinay-Yadav-1226">
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+						<span class="fab fa-quora"></span>
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="https://github.com/yadavg123">
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+						<span class="fab fa-github"></span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="footer-content">
+			<p>Copyright &copy; 2019 All Rights Reserved. Developed and Maintained by Vinay Yadav.</p>
+		</div>
+	</footer>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script type="text/javascript" src="https://ricostacruz.com/jquery.transit/jquery.transit.min.js"></script>
+	<script type="text/javascript" src="./js/script.js"></script>
+	<script type="text/javascript">
+		window.addEventListener('load',function(){
+			const preload=document.querySelector('.preload');
+			preload.classList.add('preload-finish');
+		});
+
+		let ww = $(window).width();
+		let wh = $(window).height();
+
+// pure javascrip random function ============
+function random(min, max) {
+	return Math.random() * (max - min) + min;
+}
+
+window.requestAnimFrame = (function() {
+	return window.requestAnimationFrame ||
+	function(callback, element) {
+		window.setTimeout(callback, 1000 / 60);
+	};
+})();
+
+function init() {} //end init
+
+function animate() {
+	requestAnimFrame(animate);
+	draw();
+}
+
+function draw() {
+
+	//setup canvas enviroment
+	let time = new Date().getTime() * 0.002;
+	//console.log(time);
+	const color1 = "rgb(251, 157, 157,0.3)";
+	const color2 = "rgb(251, 157, 157,0.4)";
+	let canvas = document.getElementById("hero-canvas");
+	let ctx = document.getElementById("hero-canvas").getContext("2d");
+	ctx.clearRect(0, 0, canvas.width, canvas.height);
+	ctx.save();
+
+	// random float to be used in the sin & cos
+	let randomX = random(.2, .9);
+	let randomY = random(.1, .2);
+
+	// sin & cos for the movement of the triangles in the canvas
+	let rectX = Math.cos(time * 1) * 1.5 + randomX;
+	let rectY = Math.sin(time * 1) * 1.5 + randomY;
+	let rectX2 = Math.cos(time * .7) * 3 + randomX;
+	let rectY2 = Math.sin(time * .7) * 3 + randomY;
+	let rectX3 = Math.cos(time * 1.4) * 4 + randomX;
+	let rectY3 = Math.sin(time * 1.4) * 4 + randomY;
+
+	//console.log(rectX + '-' + rectY + '-' + rectX2 + '-' + rectY2 + '-' + rectX3 + '-' + rectY3);
+
+	//triangle gradiente ==========================================
+	var triangle_gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+	triangle_gradient.addColorStop(0, color1);
+	triangle_gradient.addColorStop(1, color2);
+
+	//triangle group 1 ===========================================
+	// triangle 1.1
+	ctx.beginPath();
+	ctx.moveTo(rectX2 + 120, rectY2 - 100);
+	ctx.lineTo(rectX2 + 460, rectY2 + 80);
+	ctx.lineTo(rectX2 + 26, rectY2 + 185);
+	ctx.fillStyle = triangle_gradient;
+	ctx.fill();
+
+	//triangle 1.2
+	ctx.beginPath();
+	ctx.moveTo(rectX - 50, rectY - 25);
+	ctx.lineTo(rectX + 270, rectY + 25);
+	ctx.lineTo(rectX - 50, rectY + 195);
+	ctx.fillStyle = triangle_gradient;
+	ctx.fill();
+
+	//triangle 1.3
+	ctx.beginPath();
+	ctx.moveTo(rectX3 - 140, rectY3 - 150);
+	ctx.lineTo(rectX3 + 180, rectY3 + 210);
+	ctx.lineTo(rectX3 - 225, rectY3 - 50);
+	ctx.fillStyle = triangle_gradient;
+	ctx.fill();
+
+	//triangle group 2 ===========================================
+	// triangle 2.1
+	ctx.beginPath();
+	ctx.moveTo(rectX + (canvas.width - 40), rectY - 30);
+	ctx.lineTo(rectX + (canvas.width + 40), rectY + 190);
+	ctx.lineTo(rectX + (canvas.width - 450), rectY + 120);
+	ctx.fillStyle = triangle_gradient;
+	ctx.fill();
+	
+	// triangle 2.2
+	ctx.beginPath();
+	ctx.moveTo(rectX3 + (canvas.width - 200), rectY3 - 240);
+	ctx.lineTo(rectX3 + (canvas.width + 80), rectY3 - 240);
+	ctx.lineTo(rectX3 + (canvas.width - 50), rectY3 + 460);
+	ctx.fillStyle = triangle_gradient;
+	ctx.fill();
+	
+	// triangle 2.3
+	ctx.beginPath();
+	ctx.moveTo(rectX2 + (canvas.width - 400), rectY2 + 140);
+	ctx.lineTo(rectX2 + (canvas.width + 20), rectY2 + 200);
+	ctx.lineTo(rectX2 + (canvas.width - 350), rectY2 + 370);
+	ctx.fillStyle = triangle_gradient;
+	ctx.fill();
+	
+	//triangle group 3 ===========================================
+	// triangle 3.1
+	ctx.beginPath();
+	ctx.moveTo(rectX3 - 50, rectY3 + (canvas.height - 350));
+	ctx.lineTo(rectX3 + 350, rectY3 + (canvas.height - 220));
+	ctx.lineTo(rectX3 - 100, rectY3 + (canvas.height - 120));
+	ctx.fillStyle = triangle_gradient;
+	ctx.fill();
+	
+	// triangle 3.2
+	ctx.beginPath();
+	ctx.moveTo(rectX + 100, rectY + (canvas.height - 380));
+	ctx.lineTo(rectX + 320, rectY + (canvas.height - 180));
+	ctx.lineTo(rectX - 275, rectY + (canvas.height + 150));
+	ctx.fillStyle = triangle_gradient;
+	ctx.fill();
+	
+	// triangle 3.3
+	ctx.beginPath();
+	ctx.moveTo(rectX2 - 230, rectY2 + (canvas.height - 50));
+	ctx.lineTo(rectX2 + 215, rectY2 + (canvas.height - 110));
+	ctx.lineTo(rectX2 + 250, rectY2 + (canvas.height + 130));
+	ctx.fillStyle = triangle_gradient;
+	ctx.fill();
+	
+	//triangle group 4 ===========================================
+	// triangle 4.1
+	ctx.beginPath();
+	ctx.moveTo(rectX3 + (canvas.width - 80), rectY3 + (canvas.height - 320));
+	ctx.lineTo(rectX3 + (canvas.width + 250), rectY3 + (canvas.height + 220));
+	ctx.lineTo(rectX3 + (canvas.width - 200), rectY3 + (canvas.height + 140));
+	ctx.fillStyle = triangle_gradient;
+	ctx.fill();
+	
+	// triangle 4.2
+	ctx.beginPath();
+	ctx.moveTo(rectX + (canvas.width - 100), rectY + (canvas.height - 160));
+	ctx.lineTo(rectX + (canvas.width - 30), rectY + (canvas.height + 90));
+	ctx.lineTo(rectX + (canvas.width - 420), rectY + (canvas.height + 60));
+	ctx.fillStyle = triangle_gradient;
+	ctx.fill();
+	
+	// triangle 4.3
+	ctx.beginPath();
+	ctx.moveTo(rectX2 + (canvas.width - 320), rectY2 + (canvas.height - 200));
+	ctx.lineTo(rectX2 + (canvas.width - 50), rectY2 + (canvas.height - 20));
+	ctx.lineTo(rectX2 + (canvas.width - 420), rectY2 + (canvas.height + 120));
+	ctx.fillStyle = triangle_gradient;
+	ctx.fill();
+
+	ctx.restore();
+
+} //end function draw
+
+//call init
+init();
+animate();	
+
+
+</script>
 </body>
 </html>
