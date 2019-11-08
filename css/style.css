@@ -780,8 +780,11 @@ footer .footer-social ul li:hover span:nth-child(1){
 	}
 }
 @media screen and (max-width: 460px){
-	figure{
-		font-size:10px;
+	figure h1{
+		font-size:20px !important;
+	}
+	.flight{
+		visibility: hidden;
 	}
 	footer .footer-social ul li{
 		width: 3rem;
