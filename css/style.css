@@ -3,11 +3,11 @@
 }
 html{
 	scroll-behavior:smooth;
-	/*overflow-x: hidden;*/
+	overflow-x: hidden;
 }
 body{
 	margin:0;
-	/*overflow-x: hidden;*/
+	overflow-x: hidden;
 }
 ::selection {
 	background-color:#000;
