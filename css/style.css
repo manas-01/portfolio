@@ -781,7 +781,7 @@ footer .footer-social ul li:hover span:nth-child(1){
 }
 @media screen and (max-width: 460px){
 	figure h1{
-		font-size:30px !important;
+		font-size:33px !important;
 	}
 	.flight{
 		visibility: hidden;
